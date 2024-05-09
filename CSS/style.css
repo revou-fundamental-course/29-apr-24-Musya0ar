@@ -4,13 +4,16 @@
     box-sizing: border-box;
     font-family: 'Segoe UI',sans-serif ;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
     min-height: 100vh;
     overflow: scroll;
-    background: linear-gradient(#ffd900,#ffffff);
+    background: linear-gradient(#2b1055,#7334d6);
 }
 .logo {
-    color: #2b1055;
+    color: #ffffff;
     font-weight: 700;
     text-decoration: none;
     font-size: 2em;
@@ -18,7 +21,7 @@ body {
     letter-spacing: 3px;
 }
 .nav-header {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -40,12 +43,59 @@ body {
 .nav-header ul li a {
     text-decoration: none;
     padding: 6px 15px;
-    color: #2b1055;
+    color: #ffffff;
     border-radius: 20px;
     }
-    .nav-header ul li a:hover, header ul li a.active {
-    background: #2b1055;
-    color: #ffffff;
+.nav-header ul li a:hover, header ul li a.active {
+    background: #ffffff;
+    color:  #2b1055;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    overflow: hidden;
+}
+.home::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent) ;
+    z-index: 120;
+
+}
+.home img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.home img#moon {
+    mix-blend-mode: screen;
+}
+.home img#sdMount{
+    transform: scale(1.1);
+    z-index: 10;
+}
+.home img#bgMount{
+    transform: scale(1.1) translateY(70px);
+}
+#welcome {
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    font-size: 1.5em;
+    z-index: 9;
 }
 .content-container{
     background: url(../assets/background.png);
@@ -56,11 +106,11 @@ body {
     text-align: center ;
     position: relative;
     padding: 30px;
-    color: #2b1055;
+    color: #ffffff;
 }
 .content-title h2{
-    padding-top: 10px;  
-    color: #6640a3; 
+    padding-top: 10px;
+    color: #6640a3;
 }
 .article-content{
     padding: 25px;
@@ -71,19 +121,23 @@ body {
     display: flex;
     flex-direction: column;
 }
-.desc-item{
-    max-width: 400px;
-    text-align:justify;
-    vertical-align: middle;
-    padding-top:10%;
-}
 .item-article{
     padding: 10px;
     margin-right: 20px;
-    max-width: fit-content;
-    height: fit-content;
+    max-width: auto;
+    height: 500px;
     background-color: #ffffff;
     border-radius: 20px;
+}
+.desc-item{
+    color: #fff;
+    padding: 10px;
+    width: auto;
+    margin-right: 20px;
+    border-radius: 20px;
+    text-align:justify;
+    vertical-align: middle;
+    padding-top:10%;
 }
 .yt-holder{
     border-radius: 20px;
@@ -118,3 +172,47 @@ input{
  textarea:is(:focus, :valid){
     border-color: #ccc;
  }
+.package h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: 7334d6;
+}
+.package {
+    color: #fff;
+    position: relative;
+    padding: 100px;
+    background: 7334d6;
+}
+.foot{
+    text-align: center;
+    color: white;
+}
+.contact {
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 110;
+    background: #2b1055;
+}
+.contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+.contact ul li{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #ffffff;
+    border-radius: 20px;
+    background-color: white;
+}
