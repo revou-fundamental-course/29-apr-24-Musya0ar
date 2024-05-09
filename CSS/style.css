@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI',sans-serif ;
+}
+body {
+    min-height: 100vh;
+    overflow: scroll;
+    background: linear-gradient(#ffd900,#ffffff);
+}
+.logo {
+    color: #2b1055;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.nav-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 110;
+}
+.nav-header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+.nav-header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #2b1055;
+    border-radius: 20px;
+    }
+    .nav-header ul li a:hover, header ul li a.active {
+    background: #2b1055;
+    color: #ffffff;
+}
+.content-container{
+    background: url(../assets/background.png);
+    position: relative;
+    overflow: hidden;
+}
+.content-title{
+    text-align: center ;
+    position: relative;
+    padding: 30px;
+    color: #2b1055;
+}
+.content-title h2{
+    padding-top: 10px;  
+    color: #6640a3; 
+}
+.article-content{
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+}
+.desc-item{
+    max-width: 400px;
+    text-align:justify;
+    vertical-align: middle;
+    padding-top:10%;
+}
+.item-article{
+    padding: 10px;
+    margin-right: 20px;
+    max-width: fit-content;
+    height: fit-content;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+.yt-holder{
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.form-container{
+    padding: 10px;
+    max-width: 450px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+input{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+ }
+ textarea{
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 3px;
+    resize: none;
+ }
+ textarea:is(:focus, :valid){
+    border-color: #ccc;
+ }
