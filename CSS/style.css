@@ -98,7 +98,7 @@ body {
     z-index: 9;
 }
 .content-container{
-    background: url(/assets/background.png);
+    background: url(../assets/background.png);
     position: relative;
     overflow: hidden;
 }
